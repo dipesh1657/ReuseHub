@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background: #ffffff;
+    padding: 0 40px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.navbar-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== LOGO ===== */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.logo-icon {
+    font-size: 24px;
+}
+
+/* ===== NAV MENU ===== */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 6px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background: #f0f7f0;
+    color: #2e7d32;
+}
+
+.nav-link.active {
+    background: #2e7d32;
+    color: #ffffff;
+}
+
+.nav-link.active:hover {
+    background: #1b5e20;
+}
+
+/* ===== RIGHT SECTION ===== */
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+/* ===== PROFILE DROPDOWN ===== */
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: #1a1a2e;
+    cursor: pointer;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.profile-btn:hover {
+    color: #2e7d32;
+}
+
+.profile-avatar {
+    font-size: 16px;
+}
+
+.profile-name {
+    font-size: 14px;
+}
+
+.dropdown-arrow {
+    font-size: 8px;
+    color: #888;
+}
+
+/* ===== DROPDOWN CONTENT ===== */
+.dropdown-content {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background: #ffffff;
+    min-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #f0f2f5;
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 18px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background: #f5f8f5;
+    color: #2e7d32;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #f0f2f5;
+    margin: 4px 0;
+    border: none;
+}
+
+.logout-btn {
+    color: #e74c3c;
+}
+
+.logout-btn:hover {
+    background: #fde8e8;
+    color: #e74c3c;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+        height: 60px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 12px 20px;
+        gap: 2px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid #f0f2f5;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 10px 16px;
+    }
+
+    .navbar-logo {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        font-size: 22px;
+    }
+
+    .profile-name {
+        display: none;
+    }
+
+    .profile-btn {
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 14px;
+        height: 54px;
+    }
+
+    .navbar-logo {
+        font-size: 18px;
+    }
+
+    .logo-icon {
+        font-size: 20px;
+    }
+
+    .dropdown-content {
+        min-width: 160px;
+        right: -8px;
+    }
+
+    .nav-menu {
+        top: 54px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .profile-btn {
+        font-size: 13px;
+  
+    }
+
+
+
+    .dropdown-item {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}

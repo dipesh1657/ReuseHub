@@ -1,0 +1,137 @@
+.profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.profile-header p {
+    color: #888;
+    margin: 0;
+}
+
+.profile-form {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.profile-form .form-group {
+    margin-bottom: 18px;
+}
+
+.profile-form .form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-form .form-group input,
+.profile-form .form-group textarea,
+.profile-form .form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.profile-form .form-group input:focus,
+.profile-form .form-group textarea:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+.profile-form .form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-form .form-row .form-group {
+    flex: 1;
+}
+
+.profile-form .form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.profile-form .cancel-btn {
+    flex: 1;
+    padding: 12px;
+    background: #f1f2f6;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.profile-form .submit-btn {
+    flex: 2;
+    padding: 12px;
+    background: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.profile-form .submit-btn:hover {
+    background: #357ABD;
+}
+
+.profile-form .cancel-btn:hover {
+    background: #e8e9ed;
+}
+
+.add-btn {
+    display: inline-block;
+    background: #4A90E2;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.add-btn:hover {
+    background: #357ABD;
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .profile-form .form-actions {
+        flex-direction: column;
+    }
+}
