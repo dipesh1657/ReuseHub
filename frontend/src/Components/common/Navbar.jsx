@@ -23,8 +23,9 @@ function Navbar() {
                 <ul className="nav-menu">
                     <li><Link to="/" className="nav-link active">Dashboard</Link></li>
                     <li><Link to="/buy" className="nav-link">Buy</Link></li>
-                    <li><Link to="/sell" className="nav-link">Sell</Link></li>
+
                     <li><Link to="/exchange" className="nav-link">Exchange</Link></li>
+                    <li><Link to="/sell" className="nav-link">Add your Items</Link></li>
                 </ul>
 
                 <div className="navbar-right">

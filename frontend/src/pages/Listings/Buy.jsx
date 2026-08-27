@@ -13,7 +13,7 @@ function Buy() {
 
     async function fetchListings() {
         try {
-            const response = await fetch('http://localhost:3000/api/all-listings');
+            const response = await fetch('http://localhost:3000/api/listings/all');
             const data = await response.json();
 
             if (response.ok) {
@@ -89,6 +89,8 @@ function Buy() {
                                     <span>{new Date(item.createdAt).toLocaleDateString()}</span>
                                 </div>
                                 <Link to={`/listing/${item._id}`} className="view-btn">View Details</Link>
+                                <br></br>
+                               <Link to={`/listing/${item._id}`} className="view-btn" style={{backgroundColor:"red"}}>Buy</Link>
                             </div>
                         </div>
                     ))}

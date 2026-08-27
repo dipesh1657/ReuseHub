@@ -13,12 +13,10 @@ function Exchange() {
 
     async function fetchListings() {
         try {
-            // ✅ Correct endpoint
             const response = await fetch('http://localhost:3000/api/listings/all');
             const data = await response.json();
 
             if (response.ok) {
-                // ✅ Filter only exchange items
                 const exchangeItems = data.listings.filter(item => item.type === 'exchange');
                 setListings(exchangeItems);
             }
@@ -92,7 +90,7 @@ function Exchange() {
                                 </div>
                                 <Link to={`/listing/${item._id}`} className="view-btn">View Details</Link>
                                 <br></br>
-                                <Link to={'/exchange/${item.id}'} className='view-btn'>Exchange</Link>
+                                <Link to={'/exchange/${item.id}'} className='view-btn' style={{backgroundColor:"red"}}>Exchange</Link>
                             </div>
                         </div>
                     ))}

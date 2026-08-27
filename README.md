@@ -28,7 +28,6 @@ ReuseHub is a full-stack web application where users can buy, sell, and exchange
 - Express.js
 - MongoDB
 - Mongoose
-- JWT Authentication
 
 ---
 

@@ -18,7 +18,7 @@ function Sell() {
             const parsedUser = JSON.parse(userData);
             const username = parsedUser.username;
 
-            const response = await fetch(`http://localhost:3000/api/my-listings/${username}`);
+            const response = await fetch(`http://localhost:3000/api/listings/my/${username}`);
             const data = await response.json();
 
             if (response.ok) {
