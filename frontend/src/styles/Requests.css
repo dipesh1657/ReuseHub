@@ -1,0 +1,22 @@
+.requests-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 20px 50px;
+}
+
+.requests-header h1 { margin: 0 0 6px; }
+.requests-header p { color: #666; margin: 0; }
+.requests-tabs { display: flex; gap: 10px; margin: 25px 0; }
+.requests-tabs button { border: 1px solid #ddd; background: #fff; padding: 10px 18px; border-radius: 9px; cursor: pointer; font-weight: 600; }
+.requests-tabs button.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+.request-list { display: grid; gap: 16px; }
+.request-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 20px; box-shadow: 0 3px 12px rgba(0,0,0,.05); }
+.request-card-top { margin-bottom: 12px; }
+.request-type { display: inline-block; padding: 6px 11px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.request-type.buy { background: #dbeafe; color: #1d4ed8; }
+.request-type.exchange { background: #ede9fe; color: #6d28d9; }
+.request-message { background: #f8fafc; border-left: 4px solid #cbd5e1; padding: 10px 12px; margin: 14px 0; }
+.request-date { font-size: 13px; color: #777; }
+.request-empty { text-align: center; padding: 60px 20px; color: #777; font-size: 18px; }
+.request-empty h3 { color: #333; font-size: 22px; margin: 10px 0; }
+.request-page-error { background: #fee2e2; color: #991b1b; padding: 10px; border-radius: 8px; }
